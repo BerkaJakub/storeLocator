@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <style>
+        body{
+          display: flex;
+        }
+        #map{
+            
+            width:600px;
+            height: 400px;
+        }
+        #sidepanel{
+            margin: 1em;
+        }
+    </style>
+  <body>
+    
+    <div>
+    <div id="map"></div>
+    <div id="directions-panel"></div>
+    
+  </div>
+    <div id="sidepanel">
+      <p><button onclick="showAllStores()">Show all stores</button></p>
+      <label for="position">Your location: </label><input id="searchField" type="text" name="position">
+      <p>Click on the map, to get your position or write address in input.
+        It will display top 5 shops which are nearest to you.</p>
+      <p>If you click on the store marker, you will get directions from your position.</p>
+      <p id="user_position"></p>
+
+      <div id="topDistances"></div>
+
+      
+      
+    </div>
+    <script src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8tjAqlNgMmkOTBU-Ec0JSEVtwJYZb_uQ&libraries=places&callback=initMap"
+        async defer></script>
+  </body>
+</html>
